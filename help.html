@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<head>
+	<link rel="stylesheet" href="bootstrap.css" />
+
+	<style type="text/css">
+		body {
+			margin-left: 10%;
+			margin-right: 10%;
+		}
+
+		.alignleft {
+			float: left;
+			width: 60%;
+		}
+
+		.alignright {
+			float: right;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="content-container">
+		<div id="content">
+			<!--PROFILE OPERATION-->
+			<h2>CAM Operations - Profile</h2>
+			<p>
+				Profile Operation with an outside cut means the bit will follow the line but depending on which option you choose (Inside or Outside) the bit will be offset from the line by half the bit's diamter. What exactly does that mean? It means that
+				if you want to retain the dimensions of your profile, you will have to make some decisions: </br>
+				1.) If the profile is on the outside of the part (such as when you are cutting the part out from the stock material), then chances are you will want to use an outside cut. Cutting on the outside will preserve the inside dimensions of your
+				profile.</br></br>
+				2.) If the profile you wish to remove is on the inside of the part, chances are you want to choose an inside cut, preserving the outside dimensions of your profile. </br>
+			</p>
+			</br>
+			<span class="alignleft">
+				<ul>
+					<li><b>name:</b> This is the name of your operation. Name it something logical so you can recognize the operation by the name you give it (needed later).</li>
+					<li>t<b>ool diameter:</b> This is the diameter of your tool. The total distance across the cutting edge of your bit.</li>
+					<li><b>target depth:</b> How deep you want the operation to go into your material.</li>
+					<li><b>inside/outside:</b> If you want the bit to be offset to the inside of your line (towards the middle of the part) or to the outside of your line (towards the outside of your part)</li>
+					<li><b>safety height:</b> How high above the material it's safe for your bit to travel. In most cases this can be any positive number. But, if you are using work holding tools like a toggle clamp, make this higher than the highest point on
+						your toggle clamp, if it's going to be in the travel path.</li>
+					<li><b>stock surface:</b> Where your operation starts working. In most cases, to begin with, we'll set the stock surface to 0. This simply means that ZERO on the z-axis is on the surface of your material.</li>
+					<li><b>step down:</b> This is asking how deep you want to increment each pass. </br>
+						<b>PRO TIP:</b>The general rule of thumb is for soft materials (like pine wood) you can do 1/2 the diameter of your bit. For really soft materials you can do the diameter of your bit. Never exceed the diameter of your bit!. For harder
+						materials choose something light.
+					</li>
+					<li><b>feed rate:</b> How fast you want the operation to run. Start slow and work your way up. But, keep in mind some materials (like plexi-glass) need to be cut quick enough to where you're not meling the plastic.</li>
+					<li><b>plung rate:</b> How fast your tool should dive into the material.</li>
+					<li><b>direction:</b> Clockwise or counterclockwise? If you're cutting an inside profile, choose counter clockwise. For an outside profile, choose clockwise. More on this later...</li>
+				</ul>
+			</span>
+			<span class="alignright">
+				<img src="circle_outside_dialog.png" />
+			</span>
+		</div>
+		<div style="clear: both;"></div>
+		<div id="aside">
+
+		</div>
+		<div id="breaker">
+			<hr>
+		</div>
+
+		<!--circle outside cut-->
+		<div id="content">
+			<p>Example 1a: we cut the 2" circle with an outside profile. Because the bit is 0.125" wide and the bit was offset to the outside of the line, the dimension of the cut circle ends up 2.25"</p>
+		</div>
+		<div id="aside">
+			<img src="circle_outside_cut.png" />
+		</div>
+		<div id="breaker">
+			<hr>
+		</div>
+
+		<!--circle inside cut-->
+		<div id="content">
+			<p>Example 1b: We cut the 2" circle with an inside profile resulting in the bit being offset to the inside of the line. Because of this, the dimension of the cut circle ends up exactly 2.00"</p>
+		</div>
+		<div id="aside">
+			<img src="inside_cut_cut.png" />
+		</div>
+		<div id="breaker">
+			<hr>
+		</div>
+
+		<!--rec inside cut-->
+		<div id="content">
+			<p>Example 1c: We cut the 4" rectangle with an inside profile. Because the bit is 0.125" wide, and the bit was offset to the inside of the line, the dimension of the cut rectangle ends up 3.75".</p>
+		</div>
+		<div id="aside">
+			<img src="rec_inside_cut.png" />
+		</div>
+		<div id="breaker">
+			<hr>
+		</div>
+
+		<!--rec outside cut-->
+		<div id="content">
+			<p>Example 1d: We cut the 4" rectangle with an *outside* profile. Becaue the bit is 0.125" wide, and the bit was offset to the *outside* of the line, the dimension of the cut rectangle ends up 4.00".</p>
+		</div>
+		<div id="aside">
+			<img src="rec_outside_cut.png" />
+		</div>
+		<div id="breaker">
+			<hr>
+		</div>
+	</div>
+	<!--END PROFILE OPERATION-->
+
+	<div id="pocket" />
+	<!--POCKET OPERATION-->
+	<h2>CAM Operations - Pocket</h2>
+	<p>
+		Pocket operation is:
+	</p>
+	</br>
+	<span class="alignleft">
+		<ul>
+			<li><b>name:</b> This is the name of your operation. Name it something logical so you can recognize the operation by the name you give it (needed later).</li>
+			<li>t<b>ool diameter:</b> This is the diameter of your tool. The total distance across the cutting edge of your bit.</li>
+			<li><b>target depth:</b> How deep you want the operation to go into your material.</li>
+			<li><b>inside/outside:</b> If you want the bit to be offset to the inside of your line (towards the middle of the part) or to the outside of your line (towards the outside of your part)</li>
+			<li><b>safety height:</b> How high above the material it's safe for your bit to travel. In most cases this can be any positive number. But, if you are using work holding tools like a toggle clamp, make this higher than the highest point on your
+				toggle clamp, if it's going to be in the travel path.</li>
+			<li><b>stock surface:</b> Where your operation starts working. In most cases, to begin with, we'll set the stock surface to 0. This simply means that ZERO on the z-axis is on the surface of your material.</li>
+			<li><b>step down:</b> This is asking how deep you want to increment each pass. </br>
+				<b>PRO TIP:</b>The general rule of thumb is for soft materials (like pine wood) you can do 1/2 the diameter of your bit. For really soft materials you can do the diameter of your bit. Never exceed the diameter of your bit!. For harder
+				materials choose something light.
+			</li>
+			<li><b>feed rate:</b> How fast you want the operation to run. Start slow and work your way up. But, keep in mind some materials (like plexi-glass) need to be cut quick enough to where you're not meling the plastic.</li>
+			<li><b>plung rate:</b> How fast your tool should dive into the material.</li>
+			<li><b>direction:</b> Clockwise or counterclockwise? If you're cutting an inside profile, choose counter clockwise. For an outside profile, choose clockwise. More on this later...</li>
+		</ul>
+	</span>
+	<span class="alignright">
+		<img src="pocket_control.png" />
+	</span>
+	</div>
+	<!--END POCKET OPERATION-->
+
+	</div>
+
+</body>
